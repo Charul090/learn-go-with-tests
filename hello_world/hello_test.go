@@ -18,6 +18,11 @@ func TestHello(t *testing.T) {
 		want := "Hola, Elodie"
 		assertCorrectHelper(t, got, want)
 	})
+	t.Run("say hellp to people in French", func(t *testing.T) {
+		got := Hello("Elodie", "French")
+		want := "Bonjour, Elodie"
+		assertCorrectHelper(t, got, want)
+	})
 }
 
 func assertCorrectHelper(t testing.TB, got, want string) {
